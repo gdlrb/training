@@ -1,25 +1,52 @@
 html {
+    color: #cc0000;
     font-size: 20px;
-    background-color: rgba(100, 100, 100, 0.3);
+    line-height: 3rem;
     text-align: center;
     letter-spacing: 10px;
-    line-height: 3rem;
     text-transform: uppercase;
-}
-div:nth-child(even) {
-    color: #cc0000;
-    font-size: 1rem;
+    background-color: rgba(100, 100, 100, 0.3);
 }
 div:nth-child(odd) {
     color: #0011ff;
     font-size: 2rem;
 }
-.four~div:not(.four) {
+.four ~ div {
     text-transform: lowercase;
 }
 .four {
     text-transform: none;
 }
+
+/*----------------------------------------------------------------*/
+
+
+/*html {*/
+    /*font-size: 20px;*/
+    /*background-color: rgba(100, 100, 100, 0.3);*/
+    /*text-align: center;*/
+    /*letter-spacing: 10px;*/
+    /*line-height: 3rem;*/
+    /*text-transform: uppercase;*/
+/*}*/
+/*div:nth-child(even) {*/
+    /*color: #cc0000;*/
+    /*font-size: 1rem;*/
+/*}*/
+/*div:nth-child(odd) {*/
+    /*color: #0011ff;*/
+    /*font-size: 2rem;*/
+/*}*/
+/*.four~div:not(.four) {*/
+    /*text-transform: lowercase;*/
+/*}*/
+/*.four {*/
+    /*text-transform: none;*/
+/*}*/
+
+
+/*----------------------------------------------------------------*/
+
 
 /*html {*/
     /*font-size: 20px;*/
