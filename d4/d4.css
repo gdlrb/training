@@ -1,0 +1,82 @@
+table {
+    font-family: Calibri;
+    font-size: 1.5rem;
+    width: 100%;
+    border-spacing: 0;
+}
+a {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-right: 10px;
+    text-decoration: none;
+    color: #00aa00;
+}
+th, td {
+    text-align: left;
+    padding: 0 0 5px 0;
+}
+.content {
+    max-width: 450px;
+    margin: auto;
+    left: 50%;
+    right: 50%;
+}
+.ok-button {
+    width: 55px;
+}
+.ok-button-block {
+    text-align: right;
+}
+.lable {
+    font-size: 1rem;
+    color: #b2b0b0;
+    padding-top: 15px;
+    padding-bottom: 0;
+}
+.lable-red {
+    font-size: 1rem;
+    color: red;
+    padding-top: 0;
+}
+.border-gray {
+    border-bottom: 1px solid #dedcdc;
+    margin: 0 0 10px 0;
+}
+.date {
+    width: 70%;
+    margin: 0 10px 0 0;
+}
+.time {
+    width: 20%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #bfbfbe;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+    color: #bfbfbe;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    top: 3px;
+    color: #bfbfbe;
+    opacity: 1;
+}
+input[type="date"], input[type="time"] {
+    width: 95%;
+    -webkit-appearance: none;
+    font-size: 18px;
+    border: 0;
+    border-bottom: 2px solid red;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+input[type="text"], textarea {
+    font-size: inherit;
+    border: 0;
+    width: 100%;
+}
+iframe[name="iframe_done"] {
+    border: none;
+    width: 100%;
+    height: auto;
+}

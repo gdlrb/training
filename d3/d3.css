@@ -1,11 +1,13 @@
 html {
     color: #cc0000;
     font-size: 20px;
-    line-height: 3rem;
     text-align: center;
     letter-spacing: 10px;
     text-transform: uppercase;
     background-color: rgba(100, 100, 100, 0.3);
+}
+div {
+    line-height: 3rem;
 }
 div:nth-child(odd) {
     color: #0011ff;
