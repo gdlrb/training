@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+}
+.head-cover {
+    position: relative;
+    overflow: hidden;
+    height: 21rem;
+}
+.head-cover:before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    background: url(d5.jpg) 0 0 repeat;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+}
+.social-icons {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 2.5rem;
+    background-color: white;
+    border: 3px solid black;
+    outline: 5px solid white;
+    padding: 20px;
+    opacity: 0.96;
+    cursor: pointer;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.block-w, .block-b {
+    padding: 30px;
+    margin: 15px 15px 0 15px;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(130,130,130,1);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(130,130,130,1);
+    box-shadow: 0px 0px 12px 0px rgba(130,130,130,1);
+}
+.block-w {
+    background-color: white;
+}
+.block-b {
+    background-color: black;
+}
+.b-row {
+    margin: 15px auto 15px 20px;
+}
+button:focus {
+    outline: none;
+}
+button {
+    font-family: Calibri;
+    font-weight: bold;
+    color: white;
+    padding: 3px 15px;
+    margin: 0;
+    border: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(130,130,130,1);
+    -moz-box-shadow: 1px 1px 1px 0px rgba(130,130,130,1);
+    box-shadow: 1px 1px 1px 0px rgba(130,130,130,1);
+}
+.b-pink {
+     background-color: deeppink;
+     background: -webkit-gradient(linear, left top, left bottom, from(hotpink), to(deeppink));
+     background: -moz-linear-gradient(top,  hotpink, deeppink);
+ }
+.b-pink:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(deeppink), to(hotpink));
+    background: -moz-linear-gradient(top, deeppink, hotpink);
+}
+.b-pink:active {
+    background: deeppink;
+    box-shadow: inset 0 1px 2px hotpink;
+}
+
+.b-green {
+     background-color: #8BC242;
+     background: -webkit-gradient(linear, left top, left bottom, from(#98CC4E), to(#8BC242));
+     background: -moz-linear-gradient(top,  #98CC4E, #8BC242);
+ }
+.b-green:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#8BC242), to(#98CC4E));
+    background: -moz-linear-gradient(top, #8BC242, #98CC4E);
+}
+.b-green:active {
+    background: #8BC242;
+    box-shadow: inset 0 1px 2px #98CC4E;
+}
+
+.b-blue {
+     background-color: #4189DE;
+     background: -webkit-gradient(linear, left top, left bottom, from(#5295E3), to(#4189DE));
+     background: -moz-linear-gradient(top,  #5295E3, #4189DE);
+ }
+.b-blue:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#4189DE), to(#5295E3));
+    background: -moz-linear-gradient(top, #4189DE, #5295E3);
+}
+.b-blue:active {
+    background: #4189DE;
+    box-shadow: inset 0 1px 2px #5295E3;
+}
+
+.b-red {
+    background-color: #F53542;
+    background: -webkit-gradient(linear, left top, left bottom, from(#F75057), to(#F53542));
+    background: -moz-linear-gradient(top,  #F75057, #F53542);
+}
+.b-red:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#F53542), to(#F75057));
+    background: -moz-linear-gradient(top, #F53542, #F75057);
+}
+.b-red:active {
+    background: #F53542;
+    box-shadow: inset 0 1px 2px #F75057;
+}
+
+.b-orange {
+    background-color: #FF6225;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FD7E49), to(#FF6225));
+    background: -moz-linear-gradient(top,  #FD7E49, #FF6225);
+}
+.b-orange:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF6225), to(#FD7E49));
+    background: -moz-linear-gradient(top, #FF6225, #FD7E49);
+}
+.b-orange:active {
+    background: #FF6225;
+    box-shadow: inset 0 1px 2px #FD7E49;
+}
+
+.b-yellow {
+    background-color: #FFB842;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FEC458), to(#FFB842));
+    background: -moz-linear-gradient(top,  #FEC458, #FFB842);
+}
+.b-yellow:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFB842), to(#FEC458));
+    background: -moz-linear-gradient(top, #FFB842, #FEC458);
+}
+.b-yellow:active {
+    background: #FFB842;
+    box-shadow: inset 0 1px 2px #FEC458;
+}
+.b-large {
+    font-size: 2rem;
+}
+.b-regular {
+    font-size: 1.2rem;
+}
+.b-small {
+    font-size: 0.8rem;
+}
