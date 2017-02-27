@@ -26,7 +26,7 @@ body {
     font-size: 2.5rem;
     background-color: white;
     border: 3px solid black;
-    outline: 5px solid white;
+    outline: 5px solid rgba(255, 255, 255, 0.96);
     padding: 20px;
     opacity: 0.96;
     cursor: pointer;
