@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="d6.css" type="text/css">
+</head>
+<body>
+
+<div class="content content--gradient">
+    <form class="form form__content form__content--centered-frame">
+
+        <h2>Form Action <code class="code__form--info">_mc4wp_action</code></h2>
+
+        <p>
+            This field will allow your to choose whether they would like to subscribe or unsubscribe
+        </p>
+
+        <h4 class="label__form--input">Field Label</h4>
+        <input class="input__form--line" type="text" value="Form Action" required>
+
+        <h4 class="label__form--input">Choice Type</h4>
+        <select class="select__form--arrows">
+            <option value="1">Radio Buttons</option>
+            <option value="2">Other ...</option>
+        </select>
+
+        <h4 class="label__form--input">Choices</h4>
+        <div class="choices choices__form--block">
+            <div>
+                <input class="radio__shoices--sub" id="cb1" type="radio" name="choice" checked>
+                <label for="cb1"></label>
+                <div class="input__form--choice">Subscribe</div>
+                <span class="input__form--line-symbol">&#9932;</span>
+            </div>
+            <div>
+                <input class="radio__shoices--sub" id="cb2" type="radio" name="choice">
+                <label for="cb2"></label>
+                <div class="input__form--choice">Unsubscribe</div>
+                <span class="input__form--line-symbol">&#9932;</span>
+            </div>
+        </div>
+
+        <h4>
+            <input id="cb3" class="input__form--checkbox" type="checkbox" name="" value="" required>
+            <label for="cb3">Wrap in paragraph tags?</label>
+        </h4>
+
+        <input class="button__form--accept" type="submit" value="Add to form">
+
+    </form>
+</div>
+
+</body>
+</html>

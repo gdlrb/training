@@ -1,0 +1,106 @@
+html, body, .content--gradient {
+    margin: 0;
+    height: 100%;
+    font-family: Calibri;
+}
+.content--gradient {
+    background: linear-gradient(#F5F5F5, #C8CCCF);
+    position: relative;
+}
+.form__content--centered-frame {
+    background-color: white;
+    border-bottom: 2px solid black;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.code__form--info {
+    background-color: #F5F5F5;
+}
+.label__form--input {
+    margin-bottom: 0;
+}
+.select__form--arrows {
+    padding: 5px 15px 5px 5px;
+    border-radius: 3px;
+    background: url(br_down.png) no-repeat right;
+    -webkit-appearance: none;
+}
+.input__form--line {
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #C8CCCF;
+}
+.choices__form--block {
+    border: 1px solid #C8CCCF;
+    padding-top: 5px;
+}
+.input__form--choice {
+    display: inline-block;
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #C8CCCF;
+}
+.input__form--line-symbol {
+    color: #C8CCCF;
+    cursor: pointer;
+}
+.input__form--checkbox:checked {
+
+}
+.input__form--checkbox, .radio__shoices--sub {
+    display:none;
+}
+.input__form--checkbox + label:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+    margin-right: 8px;
+    background-color: white;
+    border: 1px solid #C8CCCF;
+    border-radius: 0;
+}
+.input__form--checkbox:checked + label:before {
+    content: "\2714";
+    color: #0082B3;
+    text-align:center;
+    line-height:20px;
+}
+.button__form--accept {
+    font-size: 1.1rem;
+    padding: 7px 15px;
+    color: white;
+    background-color: #0082B3;
+    border: 0;
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.radio__shoices--sub + label:before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin: 0 0 0 5px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #C8CCCF;
+}
+.radio__shoices--sub:checked + label:before {
+    content: "\2022";
+    color: #0082B3;
+    background-color: white;
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 15px;
+}
