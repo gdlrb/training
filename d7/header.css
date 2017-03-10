@@ -45,19 +45,16 @@ c_nav--item > a:hover {
 }
 @media all and (max-width: 800px) {
     c_nav {
-        justify-content: space-around;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 0;
     }
-}
-@media all and (max-width: 600px) {
-    c_nav {
-        -webkit-flex-flow: column wrap;
+    c_header {
         flex-flow: column wrap;
         padding: 0;
     }
     c_nav > a {
         text-align: center;
         padding: 10px;
-        border-top: 1px solid rgba(255,255,255,0.3);
-        border-bottom: 1px solid rgba(0,0,0,0.1);
     }
 }

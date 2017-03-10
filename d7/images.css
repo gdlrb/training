@@ -148,3 +148,25 @@ c--items--type-4d {
     cursor: pointer;
     background-image: url(img/l2-1.jpg);
 }
+@media all and (max-width: 900px) {
+    c--group--items-type-1 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 1050px;
+    }
+    c--group--items-type-2 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 1050px;
+    }
+    c--group--items-type-3 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 1050px;
+    }
+    c--group--items-type-4 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 1250px;
+    }
+}

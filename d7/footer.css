@@ -1,4 +1,4 @@
-c--footer{
+c--footer {
     margin: 0 auto 15px auto;
     padding: 25px 0 40px 0;
     width: 90%;
@@ -14,4 +14,13 @@ c--copyright {
 }
 c--scroll-to-top {
     font-size: 1.1rem;
+}
+@media all and (max-width: 900px) {
+    c--footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+    c--copyright {
+        font-size: 1rem;
+    }
 }

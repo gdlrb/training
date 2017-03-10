@@ -1,11 +1,5 @@
 c_items-info {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    min-height: 400px;
-}
-c_items-info {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
@@ -153,4 +147,64 @@ c--design-m-description {
 }
 .fa-bar-chart {
     color: white;
+}
+
+@media all and (max-width: 1200px) {
+    c_info--title {
+        font-size: 1.2rem;
+    }
+    c_info--description {
+        font-size: 1.2rem;
+    }
+    c_items-info {
+        min-height: 400px;
+    }
+    .btn-gallery {
+        width: 150px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    .btn-more {
+        width: 150px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+@media all and (max-width: 900px) {
+    c_info--title {
+        font-size: 1rem;
+    }
+    c_info--description {
+        font-size: 1rem;
+        margin: 10px 5%;
+    }
+    c_items-info {
+        min-height: 300px;
+    }
+    .btn-gallery {
+        width: 120px;
+        height: 50px;
+        font-size: 1rem;
+    }
+    .btn-more {
+        width: 120px;
+        height: 50px;
+        font-size: 1rem;
+    }
+    c--group--items-design {
+        flex-direction: column;
+    }
+    c--item--design-d {
+        padding: 40px 0;
+    }
+    c--item--design-i {
+        padding: 40px 0;
+    }
+    c--item--design-e {
+        padding: 40px 0;
+    }
+    c--item--design-m {
+        padding: 40px 0;
+    }
 }

@@ -247,3 +247,46 @@ c--type--5k-description {
     color: #fdfdfd;
     margin: 0 15px;
 }
+@media all and (max-width: 900px) {
+    c--group--items-about {
+        min-height: 200px;
+    }
+    c--items--about-title {
+        font-size: 1.2rem;
+        margin: 10px 5%;
+    }
+    c--items--about-description {
+        font-size: 1.1rem;
+        margin: 10px 5%;
+    }
+    c--group--items-type-5 {
+        flex-direction: column;
+    }
+    c--item--type-5a {
+        padding: 40px 0;
+    }
+    c--item--type-5b {
+        padding: 40px 0;
+    }
+    c--item--type-5c {
+        padding: 40px 0;
+    }
+    c--item--type-5d {
+        padding: 40px 0;
+    }
+    c--item--type-5e {
+        padding: 40px 0;
+    }
+    c--item--type-5f {
+        padding: 40px 0;
+    }
+    c--item--type-5g {
+        padding: 40px 0;
+    }
+    c--item--type-5j {
+        padding: 40px 0;
+    }
+    c--item--type-5k {
+        padding: 40px 0;
+    }
+}

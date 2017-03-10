@@ -180,3 +180,22 @@ c--contact-form-3--Phone {
     color: #434343;
     margin: 0 15px;
 }
+
+@media all and (max-width: 900px) {
+    c--items--contact-description {
+        margin: 10px 5%;
+    }
+    c--group--contact-form {
+        flex-direction: column;
+    }
+    c--contact-form-1 {
+        padding: 30px 0;
+    }
+    c--contact-form-2 {
+        padding: 30px 0;
+    }
+    c--contact-form-3 {
+        padding: 30px 0;
+    }
+
+}
