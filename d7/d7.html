@@ -5,13 +5,14 @@
     <title>Title</title>
 
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
-    <link rel="stylesheet" href="font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="main.css" type="text/css">
     <link rel="stylesheet" href="header.css" type="text/css">
     <link rel="stylesheet" href="group.css" type="text/css">
     <link rel="stylesheet" href="info.css" type="text/css">
     <link rel="stylesheet" href="images.css" type="text/css">
     <link rel="stylesheet" href="about.css" type="text/css">
+    <link rel="stylesheet" href="contact.css" type="text/css">
     <link rel="stylesheet" href="footer.css" type="text/css">
 
 </head>
@@ -259,31 +260,44 @@
 
         <c--group--contact-form>
             <c--contact-form-1>
-                <label>Your Name</label><br>
-                <input type="text" placeholder="Write a full name"><br>
+                <c--contact-name>
+                    <label>Your Name</label><br>
+                    <input type="text" placeholder="Write a full name"><br>
+                </c--contact-name>
 
-                <label>Your Email</label><br>
-                <input type="text" placeholder="Enter your email"><br>
+                <c--contact-mail>
+                    <label>Your Email</label><br>
+                    <input type="text" placeholder="Enter your email"><br>
+                </c--contact-mail>
 
-                <label>Your Budget</label><br>
-                <select>
-                    <option value="1">$500</option>
-                    <option value="2">$1000</option>
-                    <option value="3">$1500</option>
-                    <option value="4">$2000</option>
-                </select>
+                <c--contact-budjet>
+                    <label>Your Budget</label><br>
+                    <select>
+                        <option value="1">$500</option>
+                        <option value="2">$1000</option>
+                        <option value="3">$1500</option>
+                        <option value="4">$2000</option>
+                    </select>
+                </c--contact-budjet>
             </c--contact-form-1>
 
             <c--contact-form-2>
-                <label>Subject</label><br>
-                <input type="text" placeholder="Subject"><br>
+                <c--contact-subject>
+                    <label>Subject</label><br>
+                    <input type="text" placeholder="Subject"><br>
+                </c--contact-subject>
 
-                <label>Your Message</label><br>
-                <textarea cols="30" rows="5" placeholder="Your Message"></textarea><br>
+                <c--contact-message>
+                    <label>Your Message</label><br>
+                    <textarea cols="30" rows="5" placeholder="Your Message"></textarea><br>
+                </c--contact-message>
 
-                <input type="checkbox"><label>I am not a robot.</label><br>
+                <c--contact-check>
+                    <input type="checkbox"><label>I am not a robot.</label>
+                </c--contact-check>
 
                 <button>Submit</button>
+
             </c--contact-form-2>
 
             <c--contact-form-3>
