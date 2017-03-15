@@ -1,14 +1,13 @@
-c_line--services {
+c_line--teams {
     display: block;
-    position: relative;
 }
-c_services {
+c_teams {
     display: flex;
     flex-direction: row;
     width: 100%;
-    min-height: 432px;
+    min-height: 252px;
 }
-c_service1 {
+c_team1 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -16,20 +15,19 @@ c_service1 {
     padding: 40px 20px;
     margin: 0 1px 1px 0;
     cursor: pointer;
-    background-color: #E4E8E8;
-    text-align: center;
+    background-color: #AB5522;
 }
-c_service1--title {
+c_team1--title {
     font-size: 2rem;
-    color: #434343;
+    color: #ffffff;
     padding: 0 15px;
 }
-c_service1--description {
+c_team1--description {
     font-size: 1.2rem;
-    color: #434343;
+    color: #ffffff;
     padding: 0 15px;
 }
-c_service2 {
+c_team2 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -37,20 +35,19 @@ c_service2 {
     padding: 40px 20px;
     margin: 0 1px 1px 0;
     cursor: pointer;
-    background-color: #9b9b9b;
-    text-align: center;
+    background-color: #2287BB;
 }
-c_service2--title {
+c_team2--title {
     font-size: 2rem;
-    color: #fdfdfd;
+    color: #ffffff;
     padding: 0 15px;
 }
-c_service2--description {
+c_team2--description {
     font-size: 1.2rem;
-    color: #fdfdfd;
+    color: #ffffff;
     padding: 0 15px;
 }
-c_service3 {
+c_team3 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -58,63 +55,41 @@ c_service3 {
     padding: 40px 20px;
     margin: 0 1px 1px 0;
     cursor: pointer;
-    background-color: #656565;
-    text-align: center;
+    background-color: #459967;
 }
-c_service3--title {
+c_team3--title {
     font-size: 2rem;
-    color: #fdfdfd;
+    color: #ffffff;
     padding: 0 15px;
 }
-c_service3--description {
+c_team3--description {
     font-size: 1.2rem;
-    color: #fdfdfd;
+    color: #ffffff;
     padding: 0 15px;
 }
-c_service4 {
+c_team4 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
     padding: 40px 20px;
-    margin: 0 0 1px 0;
+    margin: 0 1px 1px 0;
     cursor: pointer;
-    background-color: #434343;
-    text-align: center;
+    background-color: #A4A530;
 }
-c_service4--title {
+c_team4--title {
     font-size: 2rem;
-    color: #fdfdfd;
+    color: #ffffff;
     padding: 0 15px;
 }
-c_service4--description {
+c_team4--description {
     font-size: 1.2rem;
-    color: #fdfdfd;
+    color: #ffffff;
     padding: 0 15px;
-}
-.fa-bolt {
-    color: white;
-}
-.fa-thumbs-up {
-    color: white;
-}
-.fa-bar-chart {
-    color: white;
 }
 @media all and (max-width: 900px) {
-    c_services {
+    c_teams {
         flex-direction: column;
-    }
-    c_service1 {
-        padding: 40px 0;
-    }
-    c_service2 {
-        padding: 40px 0;
-    }
-    c_service3 {
-        padding: 40px 0;
-    }
-    c_service4 {
-        padding: 40px 0;
+        width: calc(100% - 40px);
     }
 }

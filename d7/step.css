@@ -1,0 +1,75 @@
+c_line--steps {
+    display: block;
+}
+c_steps {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 252px;
+}
+c_step1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    padding: 40px 20px;
+    margin: 0 1px 1px 0;
+    cursor: pointer;
+    background-color: #E3E7E8;
+}
+c_step1--title {
+    font-size: 2rem;
+    color: #434343;
+    padding: 0 15px;
+}
+c_step1--description {
+    font-size: 1.2rem;
+    color: #434343;
+    padding: 0 15px;
+}
+c_step2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    padding: 40px 20px;
+    margin: 0 1px 1px 0;
+    cursor: pointer;
+    background-color: #999999;
+}
+c_step2--title {
+    font-size: 2rem;
+    color: #ffffff;
+    padding: 0 15px;
+}
+c_step2--description {
+    font-size: 1.2rem;
+    color: #ffffff;
+    padding: 0 15px;
+}
+c_step3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    padding: 40px 20px;
+    margin: 0 1px 1px 0;
+    cursor: pointer;
+    background-color: #676767;
+}
+c_step3--title {
+    font-size: 2rem;
+    color: #ffffff;
+    padding: 0 15px;
+}
+c_step3--description {
+    font-size: 1.2rem;
+    color: #ffffff;
+    padding: 0 15px;
+}
+@media all and (max-width: 900px) {
+    c_steps {
+        flex-direction: column;
+        width: calc(100% - 40px);
+    }
+}

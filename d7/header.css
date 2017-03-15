@@ -1,7 +1,11 @@
 c_header {
-    margin: 0 auto 15px auto;
+    display: block;
+    position: relative;
+    padding-bottom: 15px;
+}
+c_header--logo {
+    margin: 0;
     padding: 0;
-    width: 90%;
     border-bottom: 1px solid #EBECF0;
     display: flex;
     flex-direction: row;
@@ -17,12 +21,12 @@ c_logo {
 c_logo--title {
     font-size: 2rem;
     color: #434343;
-    margin: 25px 0 0 0;
+    padding: 25px 0 0 0;
 }
 c_logo--description {
     color: #abacaf;
     font-size: 1rem;
-    margin: 25px 0 25px 0;
+    padding: 25px 0 25px 0;
 }
 c_nav {
     list-style: none;
@@ -49,7 +53,7 @@ c_nav--item > a:hover {
         justify-content: center;
         padding: 0;
     }
-    c_header {
+    c_header--logo {
         flex-flow: column wrap;
         padding: 0;
     }

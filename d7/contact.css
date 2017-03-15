@@ -1,201 +1,38 @@
-c--group--items-contact {
+c_line--contact {
+    display: block;
+    position: relative;
+}
+c_contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     min-height: 330px;
     text-align: center;
+    background-image: url(img/info.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
-c--items--contact-title {
+c_contact--title {
     font-size: 2rem;
     color: #434343;
-    margin: 10px 25%;
+    padding: 10px 25%;
 }
-c--items--contact-description {
+c_contact--description {
     font-size: 1.4rem;
     line-height: 1.5;
     color: #898a8d;
-    margin: 10px 25%;
+    padding: 10px 25%;
 }
-c--items--contact-description > a {
+c_contact--description > a {
     text-decoration: none;
 }
-c--group--contact-form {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    min-height: 330px;
-    background-color: white;
-}
-c--contact-form-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 30px 10px;
-    margin: 0 1px 1px 0;
-    text-align: left;
-    font-size: 1.4rem;
-}
-c--contact-name {
-    width: 100%;
-    margin-bottom: 30px;
-}
-c--contact-name > lable {
-    color: #363868;
-}
-c--contact-name > input {
-    width: 98%;
-    margin: 10px 0;
-    font-size: 1.1rem;
-    padding: 10px 0 10px 10px;
-    border: 1px solid #CECECE;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-c--contact-mail {
-    width: 100%;
-    margin-bottom: 30px;
-}
-c--contact-mail > lable {
-    color: #363868;
-}
-c--contact-mail > input {
-    width: 98%;
-    margin: 10px 0;
-    font-size: 1.1rem;
-    padding: 10px 0 10px 10px;
-    border: 1px solid #CECECE;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-c--contact-budjet {
-    width: 100%;
-    margin-bottom: 30px;
-}
-c--contact-budjet > lable {
-    color: #363868;
-}
-c--contact-budjet > select {
-    width: 100%;
-    margin: 10px 0;
-    font-size: 1.1rem;
-    padding: 10px 0 10px 10px;
-    border: 1px solid #CECECE;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-c--contact-form-2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 30px 10px;
-    margin: 0 1px 1px 0;
-    text-align: left;
-    font-size: 1.4rem;
-}
-c--contact-subject {
-    width: 100%;
-    margin-bottom: 30px;
-}
-c--contact-subject > lable {
-    color: #363868;
-}
-c--contact-subject > input {
-    width: 100%;
-    margin: 10px 0;
-    font-size: 1.1rem;
-    padding: 10px 0 10px 10px;
-    border: 1px solid #CECECE;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-c--contact-message {
-    width: 100%;
-    margin-bottom: 30px;
-}
-c--contact-message > lable {
-    color: #363868;
-}
-c--contact-message > textarea {
-    width: 100%;
-    margin: 10px 0;
-    font-size: 1.1rem;
-    padding: 10px 0 10px 10px;
-    border: 1px solid #CECECE;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-c--contact-check {
-    width: 100%;
-    margin-bottom: 30px;
-}
-c--contact-form-2 > button {
-    border: none;
-    width: 160px;
-    height: 50px;
-    font-size: 1.2rem;
-    background-color: #5BB85D;
-    color: white;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
-c--contact-form-3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    padding: 30px 10px;
-    margin: 0 1px 1px 0;
-    text-align: left;
-    font-size: 1.4rem;
-}
-c--contact-form-3--tittle {
-    font-size: 2rem;
-    color: #434343;
-    margin: 0 15px;
-}
-c--contact-form-3--description {
-    font-size: 1.4rem;
-    color: #434343;
-    margin: 0 15px;
-}
-c--contact-form-3--mail {
-    font-size: 1.4rem;
-    color: #434343;
-    margin: 0 15px;
-}
-c--contact-form-3--Phone {
-    font-size: 1.4rem;
-    color: #434343;
-    margin: 0 15px;
-}
-
 @media all and (max-width: 900px) {
-    c--items--contact-description {
-        margin: 10px 5%;
+    c_contact--title {
+        padding: 10px 5%;
     }
-    c--group--contact-form {
-        flex-direction: column;
+    c_contact--description {
+        padding: 10px 5%;
     }
-    c--contact-form-1 {
-        padding: 30px 0;
-    }
-    c--contact-form-2 {
-        padding: 30px 0;
-    }
-    c--contact-form-3 {
-        padding: 30px 0;
-    }
-
 }

@@ -1,26 +1,38 @@
-c_items-info {
+c_line--info {
+    display: block;
+    position: relative;
+}
+c_info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    margin: 0;
     min-height: 584px;
     text-align: center;
+    border-bottom: 1px solid white;
+    background-image: url(img/info.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 c_info--title {
     font-size: 3rem;
     color: #434343;
-    margin: 10px 25%;
+    padding: 10px 25%;
 }
 c_info--description {
     font-size: 1.7rem;
     line-height: 1.5;
     color: #898a8d;
-    margin: 10px 25%;
+    padding: 10px 25%;
 }
-c_info-select {
+c_info--btn {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+    padding: 10px 25%;
 }
 .btn-gallery {
     border: none;
@@ -32,6 +44,7 @@ c_info-select {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    padding: 10px;
     margin: 10px;
     cursor: pointer;
 }
@@ -45,110 +58,10 @@ c_info-select {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    padding: 10px;
     margin: 10px;
     cursor: pointer;
 }
-
-c--group--items-design {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    min-height: 432px;
-}
-c--item--design-d {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    padding: 40px 20px;
-    margin: 0 0 1px 0;
-    cursor: pointer;
-    background-color: #E4E8E8;
-    text-align: center;
-}
-c--design-d-title {
-    font-size: 2rem;
-    color: #434343;
-    margin: 0 15px;
-}
-c--design-d-description {
-    font-size: 1.2rem;
-    color: #434343;
-    margin: 0 15px;
-}
-c--item--design-i {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    padding: 40px 20px;
-    margin: 0 1px 1px 0;
-    cursor: pointer;
-    background-color: #9b9b9b;
-    text-align: center;
-}
-c--design-i-title {
-    font-size: 2rem;
-    color: #fdfdfd;
-    margin: 0 15px;
-}
-c--design-i-description {
-    font-size: 1.2rem;
-    color: #fdfdfd;
-    margin: 0 15px;
-}
-c--item--design-e {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    padding: 40px 20px;
-    margin: 0 1px 1px 0;
-    cursor: pointer;
-    background-color: #656565;
-    text-align: center;
-}
-c--design-e-title {
-    font-size: 2rem;
-    color: #fdfdfd;
-    margin: 0 15px;
-}
-c--design-e-description {
-    font-size: 1.2rem;
-    color: #fdfdfd;
-    margin: 0 15px;
-}
-c--item--design-m {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    padding: 40px 20px;
-    margin: 0 1px 1px 0;
-    cursor: pointer;
-    background-color: #434343;
-    text-align: center;
-}
-c--design-m-title {
-    font-size: 2rem;
-    color: #fdfdfd;
-    margin: 0 15px;
-}
-c--design-m-description {
-    font-size: 1.2rem;
-    color: #fdfdfd;
-    margin: 0 15px;
-}
-.fa-bolt {
-    color: white;
-}
-.fa-thumbs-up {
-    color: white;
-}
-.fa-bar-chart {
-    color: white;
-}
-
 @media all and (max-width: 1200px) {
     c_info--title {
         font-size: 1.2rem;
@@ -156,7 +69,7 @@ c--design-m-description {
     c_info--description {
         font-size: 1.2rem;
     }
-    c_items-info {
+    c_info {
         min-height: 400px;
     }
     .btn-gallery {
@@ -170,16 +83,15 @@ c--design-m-description {
         font-size: 1.2rem;
     }
 }
-
 @media all and (max-width: 900px) {
     c_info--title {
         font-size: 1rem;
     }
     c_info--description {
         font-size: 1rem;
-        margin: 10px 5%;
+        padding: 10px 5%;
     }
-    c_items-info {
+    c_info {
         min-height: 300px;
     }
     .btn-gallery {
@@ -191,20 +103,5 @@ c--design-m-description {
         width: 120px;
         height: 50px;
         font-size: 1rem;
-    }
-    c--group--items-design {
-        flex-direction: column;
-    }
-    c--item--design-d {
-        padding: 40px 0;
-    }
-    c--item--design-i {
-        padding: 40px 0;
-    }
-    c--item--design-e {
-        padding: 40px 0;
-    }
-    c--item--design-m {
-        padding: 40px 0;
     }
 }

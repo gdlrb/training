@@ -4,331 +4,363 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
     <link rel="stylesheet" href="fonts/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="page.css" type="text/css">
     <link rel="stylesheet" href="header.css" type="text/css">
-    <link rel="stylesheet" href="group.css" type="text/css">
     <link rel="stylesheet" href="info.css" type="text/css">
+    <link rel="stylesheet" href="services.css" type="text/css">
     <link rel="stylesheet" href="images.css" type="text/css">
     <link rel="stylesheet" href="about.css" type="text/css">
+    <link rel="stylesheet" href="step.css" type="text/css">
+    <link rel="stylesheet" href="details.css" type="text/css">
+    <link rel="stylesheet" href="teams.css" type="text/css">
     <link rel="stylesheet" href="contact.css" type="text/css">
+    <link rel="stylesheet" href="feedback.css" type="text/css">
     <link rel="stylesheet" href="footer.css" type="text/css">
 
 </head>
 <body>
-
+<c_page>
     <c_header>
-        <c_logo>
-            <c_logo--title>Sigma</c_logo--title>
-            <c_logo--description>Image Gallery built not on Bootstrap 4.0</c_logo--description>
-        </c_logo>
-        <c_nav>
-            <c_nav--item><a href="#">Home</a></c_nav--item>
-            <c_nav--item><a href="#">Gallery</a></c_nav--item>
-            <c_nav--item><a href="#">About</a></c_nav--item>
-            <c_nav--item><a href="#">Contact</a></c_nav--item>
-            <c_nav--item><a href="#">External</a></c_nav--item>
-        </c_nav>
+        <c_header--logo>
+            <c_logo>
+                <c_logo--title>Sigma</c_logo--title>
+                <c_logo--description>Image Gallery built not on Bootstrap 4.0</c_logo--description>
+            </c_logo>
+
+            <c_nav>
+                <c_nav--item><a href="#">Home</a></c_nav--item>
+                <c_nav--item><a href="#">Gallery</a></c_nav--item>
+                <c_nav--item><a href="#">About</a></c_nav--item>
+                <c_nav--item><a href="#">Contact</a></c_nav--item>
+                <c_nav--item><a href="#">External</a></c_nav--item>
+            </c_nav>
+        </c_header--logo>
     </c_header>
 
-    <c_group>
-        <c_items-info>
-            <c_info--title>
-                Bootstrap 4.0 Theme
-            </c_info--title>
+    <c_line>
+        <c_line--info>
+            <c_info>
+                <c_info--title>
+                    Bootstrap 4.0 Theme
+                </c_info--title>
 
-            <c_info--description>
-                Sigma is free Bootstrap 4 (alpha 2) theme designed for a metro-style image grid gallery.
-                Download, modify and use this layout for your websites.
-            </c_info--description>
+                <c_info--description>
+                    Sigma is free Bootstrap 4 (alpha 2) theme designed for a metro-style image grid gallery.
+                    Download, modify and use this layout for your websites.
+                </c_info--description>
 
-            <c_info-select>
-                <button class="btn-gallery">Our Gallery</button>
-                <button class="btn-more">Learn More</button>
-            </c_info-select>
-        </c_items-info>
+                <c_info--btn>
+                    <button class="btn-gallery">Our Gallery</button>
+                    <button class="btn-more">Learn More</button>
+                </c_info--btn>
+            </c_info>
+        </c_line--info>
+    </c_line>
 
-        <c--group--items-design>
-            <c--item--design-d>
-                <i class="fa fa-power-off fa-5x" aria-hidden="true"></i>
-                <c--design-d-title>Design</c--design-d-title>
-                <c--design-d-description>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi.
-                    Praesent ornare massa vehicula.</c--design-d-description>
-            </c--item--design-d>
+    <c_line>
+        <c_line--services>
+            <c_services>
+                <c_service1>
+                    <i class="fa fa-power-off fa-5x" aria-hidden="true"></i>
+                    <c_service1--title>
+                        Design
+                    </c_service1--title>
+                    <c_service1--description>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi.
+                        Praesent ornare massa vehicula.
+                    </c_service1--description>
+                </c_service1>
 
-            <c--item--design-i>
-                <i class="fa fa-bolt fa-5x" aria-hidden="true"></i>
-                <c--design-i-title>Implement</c--design-i-title>
-                <c--design-i-description>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi.
-                    Praesent ornare massa vehicula.</c--design-i-description>
-            </c--item--design-i>
+                <c_service2>
+                    <i class="fa fa-bolt fa-5x" aria-hidden="true"></i>
+                    <c_service2--title>
+                        Implement
+                    </c_service2--title>
+                    <c_service2--description>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi.
+                        Praesent ornare massa vehicula.
+                    </c_service2--description>
+                </c_service2>
 
-            <c--item--design-e>
-                <i class="fa fa-thumbs-up fa-5x" aria-hidden="true"></i>
-                <c--design-e-title>Enhance</c--design-e-title>
-                <c--design-e-description>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi.
-                    Praesent ornare massa vehicula.</c--design-e-description>
-            </c--item--design-e>
+                <c_service3>
+                    <i class="fa fa-thumbs-up fa-5x" aria-hidden="true"></i>
+                    <c_service3--title>
+                        Enhance
+                    </c_service3--title>
+                    <c_service3--description>
+                        Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi.
+                        Praesent ornare massa vehicula.
+                    </c_service3--description>
+                </c_service3>
 
-            <c--item--design-m>
-                <i class="fa fa-bar-chart fa-5x" aria-hidden="true"></i>
-                <c--design-m-title>Monitor</c--design-m-title>
-                <c--design-m-description>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi.
-                    Praesent ornare massa vehicula.</c--design-m-description>
-            </c--item--design-m>
-        </c--group--items-design>
+                <c_service4>
+                    <i class="fa fa-bar-chart fa-5x" aria-hidden="true"></i>
+                    <c_service4--title>
+                        Monitor
+                    </c_service4--title>
+                    <c_service4--description>
+                        Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi.
+                        Praesent ornare massa vehicula.
+                    </c_service4--description>
+                </c_service4>
+            </c_services>
+        </c_line--services>
+    </c_line>
 
-        <!--<c_img-lines>-->
-            <!--<c_img-line-1>-->
-                <!--<c_img-line-1&#45;&#45;col-1>-->
-                <!--</c_img-line-1&#45;&#45;col-1>-->
-                <!--<c_img-line-1&#45;&#45;col-2>-->
-                <!--</c_img-line-1&#45;&#45;col-2>-->
-            <!--</c_img-line-1>-->
-        <!--</c_img-lines>-->
+    <c_line>
+        <c_line--galleries>
+            <c_galleries>
+                <c_gallery1>
+                    <c_gallery1--item1></c_gallery1--item1>
+                    <c_gallery1--item2></c_gallery1--item2>
+                    <c_gallery1--item3></c_gallery1--item3>
+                </c_gallery1>
 
-        <c--group--items-type-1>
-            <c--item--type-1a></c--item--type-1a>
-            <c--item--type-1b></c--item--type-1b>
-            <c--item--type-1c></c--item--type-1c>
-        </c--group--items-type-1>
+                <c_gallery2>
+                    <c_gallery2--item1>
+                        <c_gallery2--item1-hight1></c_gallery2--item1-hight1>
+                    </c_gallery2--item1>
+                    <c_gallery2--item2>
+                        <c_gallery2--item2-medium1></c_gallery2--item2-medium1>
+                        <c_gallery2--item2-medium2></c_gallery2--item2-medium2>
+                    </c_gallery2--item2>
+                </c_gallery2>
 
-        <c--group--items-type-2>
-            <c--item--type-2a>
-                <c--type--2a-1></c--type--2a-1>
-            </c--item--type-2a>
+                <c_gallery3>
+                    <c_gallery3--item1></c_gallery3--item1>
+                    <c_gallery3--item2></c_gallery3--item2>
+                </c_gallery3>
 
-            <c--item--type-2b>
-                <c--type--2b-1></c--type--2b-1>
-                <c--type--2b-2></c--type--2b-2>
-            </c--item--type-2b>
-        </c--group--items-type-2>
+                <c_gallery4>
+                    <c_gallery4--item1></c_gallery4--item1>
+                    <c_gallery4--item2></c_gallery4--item2>
+                    <c_gallery4--item3></c_gallery4--item3>
+                    <c_gallery4--item4></c_gallery4--item4>
+                </c_gallery4>
+            </c_galleries>
+        </c_line--galleries>
+    </c_line>
 
-        <c--group--items-type-3>
-            <c--item--type-3a></c--item--type-3a>
-            <c--item--type-3b></c--item--type-3b>
-        </c--group--items-type-3>
+    <c_line>
+        <c_line--about>
+            <c_about>
+                <c_about--title>
+                    About Us
+                </c_about--title>
 
-        <c--group--items-type-4>
-            <c--items--type-4a></c--items--type-4a>
-            <c--items--type-4b></c--items--type-4b>
-            <c--items--type-4c></c--items--type-4c>
-            <c--items--type-4d></c--items--type-4d>
-        </c--group--items-type-4>
+                <c_about--description>
+                    Sed elit elit, dictum eu turpis non, fringilla efficitur ipsum.
+                    Phasellus ultrices, nunc et tempus porta, tellus purus elementum ex, volutpat lobortis orci dolor in tortor.
+                </c_about--description>
+            </c_about>
+        </c_line--about>
+    </c_line>
 
-        <!--<c_about>-->
-            <!--<c_about-tittle>                -->
-            <!--</c_about-tittle>-->
-            <!--<c_about-description>                -->
-            <!--</c_about-description>-->
-            <!--<c_about-line-1>-->
-                <!--<c_about-line-1&#45;&#45;col-1>                    -->
-                <!--</c_about-line-1&#45;&#45;col-1>-->
-                <!--<c_about-line-1&#45;&#45;col-2>-->
-                <!--</c_about-line-1&#45;&#45;col-2>-->
-                <!--<c_about-line-1&#45;&#45;col-3>-->
-                <!--</c_about-line-1&#45;&#45;col-3>-->
-            <!--</c_about-line-1>-->
-        <!--</c_about>-->
+    <c_line>
+        <c_line--steps>
+            <c_steps>
+                <c_step1>
+                    <c_step1--title>
+                        01 Design
+                    </c_step1--title>
 
-        <c--group--items-about>
-            <c--items--about-title>
-                About Us
-            </c--items--about-title>
+                    <c_step1--description>
+                        Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
+                    </c_step1--description>
+                </c_step1>
 
-            <c--items--about-description>
-                Sed elit elit, dictum eu turpis non, fringilla efficitur ipsum.
-                Phasellus ultrices, nunc et tempus porta, tellus purus elementum ex, volutpat lobortis orci dolor in tortor.
-            </c--items--about-description>
-        </c--group--items-about>
+                <c_step2>
+                    <c_step2--title>
+                        02 Coding
+                    </c_step2--title>
 
-        <c--group--items-type-5>
-            <c--item--type-5a>
-                <c--type--5a-title>
-                    01 Design
-                </c--type--5a-title>
+                    <c_step2--description>
+                        Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
+                    </c_step2--description>
+                </c_step2>
 
-                <c--type--5a-description>
-                    Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
-                </c--type--5a-description>
-            </c--item--type-5a>
+                <c_step3>
+                    <c_step3--title>
+                        03 Mobile Ready
+                    </c_step3--title>
 
-            <c--item--type-5b>
-                <c--type--5b-title>
-                    02 Coding
-                </c--type--5b-title>
+                    <c_step3--description>
+                        Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
+                    </c_step3--description>
+                </c_step3>
+            </c_steps>
+        </c_line--steps>
+    </c_line>
 
-                <c--type--5b-description>
-                    Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
-                </c--type--5b-description>
-            </c--item--type-5b>
+    <c_line>
+        <c_line--details>
+            <c_details>
+                <c_detail1>
+                    <c_detail1--title>
+                        Left Column
+                    </c_detail1--title>
 
-            <c--item--type-5c>
-                <c--type--5c-title>
-                    03 Mobile Ready
-                </c--type--5c-title>
+                    <c_detail1--description>
+                        Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
+                    </c_detail1--description>
 
-                <c--type--5c-description>
-                    Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
-                </c--type--5c-description>
-            </c--item--type-5c>
-        </c--group--items-type-5>
+                    <c_detail1--select>
+                        <button class="about-detail">Read Detail</button>
+                    </c_detail1--select>
+                </c_detail1>
 
-        <c--group--items-type-5>
-            <c--item--type-5d>
-                <c--type--5d-title>
-                    Left Column
-                </c--type--5d-title>
+                <c_detail2>
+                    <c_detail2--title>
+                        Right Column
+                    </c_detail2--title>
 
-                <c--type--5d-description>
-                    Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
-                </c--type--5d-description>
+                    <c_detail2--description>
+                        Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
+                    </c_detail2--description>
 
-                <c--type--5d-select>
-                    <button class="about-detail">Read Detail</button>
-                </c--type--5d-select>
-            </c--item--type-5d>
+                    <c_detail2--select>
+                        <button class="about-more">Learn More</button>
+                    </c_detail2--select>
+                </c_detail2>
+            </c_details>
+        </c_line--details>
+    </c_line>
 
-            <c--item--type-5e>
-                <c--type--5e-title>
-                    Right Column
-                </c--type--5e-title>
+    <c_line>
+        <c_line--teams>
+            <c_teams>
+                <c_team1>
+                    <c_team1--title>
+                        Our Team
+                    </c_team1--title>
 
-                <c--type--5e-description>
-                    Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
-                </c--type--5e-description>
+                    <c_team1--description>
+                        Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
+                    </c_team1--description>
+                </c_team1>
 
-                <c--type--5e-select>
-                    <button class="about-more">Learn More</button>
-                </c--type--5e-select>
-            </c--item--type-5e>
-        </c--group--items-type-5>
+                <c_team2>
+                    <c_team2--title>
+                        History
+                    </c_team2--title>
 
-        <c--group--items-type-5>
-            <c--item--type-5f>
-                <c--type--5f-title>
-                    Our Team
-                </c--type--5f-title>
+                    <c_team2--description>
+                        Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
+                    </c_team2--description>
+                </c_team2>
 
-                <c--type--5f-description>
-                    Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
-                </c--type--5f-description>
-            </c--item--type-5f>
+                <c_team3>
+                    <c_team3--title>
+                        Management
+                    </c_team3--title>
 
-            <c--item--type-5g>
-                <c--type--5g-title>
-                    History
-                </c--type--5g-title>
+                    <c_team3--description>
+                        Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
+                    </c_team3--description>
+                </c_team3>
 
-                <c--type--5g-description>
-                    Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
-                </c--type--5g-description>
-            </c--item--type-5g>
+                <c_team4>
+                    <c_team4--title>
+                        Career
+                    </c_team4--title>
 
-            <c--item--type-5j>
-                <c--type--5j-title>
-                    Management
-                </c--type--5j-title>
+                    <c_team4--description>
+                        Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
+                    </c_team4--description>
+                </c_team4>
+            </c_teams>
+        </c_line--teams>
+    </c_line>
 
-                <c--type--5j-description>
-                    Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
-                </c--type--5j-description>
-            </c--item--type-5j>
+    <c_line>
+        <c_line--contact>
+            <c_contact>
+                <c_contact--title>
+                    Contact
+                </c_contact--title>
 
-            <c--item--type-5k>
-                <c--type--5k-title>
-                    Career
-                </c--type--5k-title>
+                <c_contact--description>
+                    You may <a href="">contact</a> templatemo if you have any question.
+                    Suspendisse dolor purus, malesuada ut luctus quis, consectetur vel ante. Integer a pulvinar orci.
+                </c_contact--description>
+            </c_contact>
+        </c_line--contact>
+    </c_line>
 
-                <c--type--5k-description>
-                    Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.
-                </c--type--5k-description>
-            </c--item--type-5k>
-        </c--group--items-type-5>
+    <c_line>
+        <c_line--feedbacks>
+            <c_feedbacks>
+                <c_feedback1>
+                    <c_feedback1--name>
+                        <label>Your Name</label><br>
+                        <input type="text" placeholder="Write a full name"><br>
+                    </c_feedback1--name>
 
-        <c--group--items-contact>
-            <c--items--contact-title>
-                Contact
-            </c--items--contact-title>
+                    <c_feedback1--mail>
+                        <label>Your Email</label><br>
+                        <input type="text" placeholder="Enter your email"><br>
+                    </c_feedback1--mail>
 
-            <c--items--contact-description>
-                You may <a href="">contact</a> templatemo if you have any question.
-                Suspendisse dolor purus, malesuada ut luctus quis, consectetur vel ante. Integer a pulvinar orci.
-            </c--items--contact-description>
-        </c--group--items-contact>
+                    <c_feedback1--budjet>
+                        <label>Your Budget</label><br>
+                        <select>
+                            <option value="1">$500</option>
+                            <option value="2">$1000</option>
+                            <option value="3">$1500</option>
+                            <option value="4">$2000</option>
+                        </select>
+                    </c_feedback1--budjet>
+                </c_feedback1>
 
-        <c--group--contact-form>
-            <c--contact-form-1>
-                <c--contact-name>
-                    <label>Your Name</label><br>
-                    <input type="text" placeholder="Write a full name"><br>
-                </c--contact-name>
+                <c_feedback2>
+                    <c_feedback2--subject>
+                        <label>Subject</label><br>
+                        <input type="text" placeholder="Subject"><br>
+                    </c_feedback2--subject>
 
-                <c--contact-mail>
-                    <label>Your Email</label><br>
-                    <input type="text" placeholder="Enter your email"><br>
-                </c--contact-mail>
+                    <c_feedback2--message>
+                        <label>Your Message</label><br>
+                        <textarea cols="30" rows="5" placeholder="Your Message"></textarea><br>
+                    </c_feedback2--message>
 
-                <c--contact-budjet>
-                    <label>Your Budget</label><br>
-                    <select>
-                        <option value="1">$500</option>
-                        <option value="2">$1000</option>
-                        <option value="3">$1500</option>
-                        <option value="4">$2000</option>
-                    </select>
-                </c--contact-budjet>
-            </c--contact-form-1>
+                    <c_feedback2--check>
+                        <input type="checkbox"><label>I am not a robot.</label>
+                    </c_feedback2--check>
 
-            <c--contact-form-2>
-                <c--contact-subject>
-                    <label>Subject</label><br>
-                    <input type="text" placeholder="Subject"><br>
-                </c--contact-subject>
+                    <button class="c_feedback2">Submit</button>
+                </c_feedback2>
 
-                <c--contact-message>
-                    <label>Your Message</label><br>
-                    <textarea cols="30" rows="5" placeholder="Your Message"></textarea><br>
-                </c--contact-message>
+                <c_feedback3>
+                    <c_feedback3--tittle>
+                        Our Address
+                    </c_feedback3--tittle>
 
-                <c--contact-check>
-                    <input type="checkbox"><label>I am not a robot.</label>
-                </c--contact-check>
+                    <c_feedback3--description>
+                        Suspendisse dolor purus, malesuada ut luctus quis, consectetur vel ante.
+                        Integer a pulvinar orci, eget sagittis enim.
+                    </c_feedback3--description>
 
-                <button>Submit</button>
+                    <c_feedback3--mail>
+                        Email: info@company.com
+                    </c_feedback3--mail>
 
-            </c--contact-form-2>
+                    <c_feedback3--phone>
+                        Phone: 070-070-0880
+                    </c_feedback3--phone>
+                </c_feedback3>
+            </c_feedbacks>
+        </c_line--feedbacks>
+    </c_line>
 
-            <c--contact-form-3>
-                <c--contact-form-3--tittle>
-                    Our Address
-                </c--contact-form-3--tittle>
-
-                <c--contact-form-3--description>
-                    Suspendisse dolor purus, malesuada ut luctus quis, consectetur vel ante.
-                    Integer a pulvinar orci, eget sagittis enim.
-                </c--contact-form-3--description>
-
-                <c--contact-form-3--mail>
-                    Email: info@company.com
-                </c--contact-form-3--mail>
-
-                <c--contact-form-3--Phone>
-                    Phone: 070-070-0880
-                </c--contact-form-3--Phone>
-            </c--contact-form-3>
-        </c--group--contact-form>
-    </c_group>
-
-    <c--footer>
-        <c--copyright>
+    <c_footer>
+        <c_copyright>
             Copyright © 2016 Sigma Bootstrap 4 Theme | design: <a href="">templatemo</a>
-        </c--copyright>
-        <c--scroll-to-top>
+        </c_copyright>
+        <c_scroll>
             <a href="">Go to top</a>
-        </c--scroll-to-top>
-    </c--footer>
+        </c_scroll>
+    </c_footer>
+</c_page>
 
 </body>
 </html>

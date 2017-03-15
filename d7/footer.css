@@ -1,26 +1,25 @@
-c--footer {
-    margin: 0 auto 15px auto;
+c_footer {
+    margin: 0;
     padding: 25px 0 40px 0;
-    width: 90%;
     border-top: 1px solid #EBECF0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-c--copyright {
+c_copyright {
     font-size: 1.1rem;
     color: #434343;
 }
-c--scroll-to-top {
+c_scroll {
     font-size: 1.1rem;
 }
 @media all and (max-width: 900px) {
-    c--footer {
+    c_footer {
         flex-direction: column;
         justify-content: center;
     }
-    c--copyright {
+    c_copyright {
         font-size: 1rem;
     }
 }

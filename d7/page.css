@@ -1,0 +1,13 @@
+c_page {
+    padding: 0 5%;
+    display: block;
+}
+c_line {
+    display: block;
+    position: relative;
+}
+@media all and (max-width: 900px) {
+    c_page {
+        padding: 1px;
+    }
+}
