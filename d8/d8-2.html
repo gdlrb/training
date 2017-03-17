@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #cc9966;
+        }
+
+        .block_q {
+            margin: auto;
+            margin-top: 15%;
+            max-width: 700px;
+            min-height: 250px;
+            background-color: maroon;
+            border-radius: 2px;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 0 4px 0 rgba(247, 242, 242, 1);
+        }
+
+        .block_gi {
+            margin: auto;
+            margin-top: 55px;
+            max-width: 600px;
+            border-radius: 2px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .block_i {
+            text-align: center;
+            font-size: 35px;
+            margin: auto;
+            margin-top: 5px;
+            width: 50%;
+            border: none;
+            border-radius: 1px;
+            background-color: white;
+            box-shadow: 0 0 4px 0 rgba(247, 242, 242, 1);
+        }
+
+        .block_v {
+            text-align: center;
+            font-size: 20px;
+            display: inline-block;
+            margin: 5px;
+            float: left;
+            border: none;
+            min-width: 140px;
+            border-radius: 1px;
+            background-color: white;
+            transition-duration: 0.4s;
+            box-shadow: 0 0 4px 0 rgba(247, 242, 242, 1);
+        }
+
+        .block_v:hover {
+            text-align: center;
+            font-size: 20px;
+            display: inline-block;
+            margin: 5px 0 0 0;
+            float: left;
+            min-width: 140px;
+            border-radius: 1px;
+            background-color: #e7a61a;
+            transition-duration: 0.4s;
+            box-shadow: 0 0 10px 0 rgba(247, 242, 242, 1);
+        }
+
+        .block_b {
+            text-align: center;
+            font-size: 35px;
+            margin: auto;
+            margin-top: 5px;
+            margin-bottom: 55px;
+            width: 50%;
+            border: none;
+            transition-duration: 0.4s;
+            background-color: white;
+        }
+
+        .block_b:hover {
+            text-align: center;
+            font-size: 35px;
+            margin: auto;
+            margin-top: 5px;
+            margin-bottom: 55px;
+            width: 50%;
+            background-color: #e7a61a;
+            box-shadow: 0 0 10px 0 rgba(247, 242, 242, 1);
+        }
+
+        @media all and (max-width: 900px) {
+            .block_q {
+                margin: 0;
+                margin-top: 0;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="block_q">
+        <div class="block_gi">
+            <button class="block_i" disabled value=""></button>
+        </div>
+        <div class="block_gi">
+            <button class="block_v" value=""></button>
+            <button class="block_v" value=""></button>
+            <button class="block_v" value=""></button>
+            <button class="block_v" value=""></button>
+        </div>
+        <div class="block_gi">
+            <button class="block_b">NEXT</button>
+        </div>
+
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            var words = {
+                w1: {
+                    word: "car",
+                    trlt: "автомобиль"
+                },
+                w2: {
+                    word: "cat",
+                    trlt: "кот"
+                },
+                w3: {
+                    word: "pen",
+                    trlt: "карандаш"
+                },
+                w4: {
+                    word: "cup",
+                    trlt: "чашка"
+                },
+                w5: {
+                    word: "movie",
+                    trlt: "фильм"
+                },
+                w6: {
+                    word: "bug",
+                    trlt: "сумка"
+                },
+                w7: {
+                    word: "dog",
+                    trlt: "собака"
+                }
+            };
+
+            var iwords = {};
+
+            var v = document.getElementsByClassName("block_v");
+            var b = document.getElementsByClassName("block_b");
+            var i = document.getElementsByClassName("block_i");
+            var qdata = words[Object.keys(words)[Math.floor(Math.random() * Object.keys(words).length)]];
+            var qword = qdata.word;
+            var qtrlt = qdata.trlt;
+            i[0].innerHTML = qword;
+
+            do {
+                iwords.i1 = qtrlt;
+                iwords.i2 = words[Object.keys(words)[Math.floor(Math.random() * Object.keys(words).length)]].trlt;
+                iwords.i3 = words[Object.keys(words)[Math.floor(Math.random() * Object.keys(words).length)]].trlt;
+                iwords.i4 = words[Object.keys(words)[Math.floor(Math.random() * Object.keys(words).length)]].trlt;
+            } while (
+                iwords.i1 == iwords.i2 ||
+                iwords.i1 == iwords.i3 ||
+                iwords.i1 == iwords.i4 ||
+                iwords.i2 == iwords.i1 ||
+                iwords.i2 == iwords.i3 ||
+                iwords.i2 == iwords.i4 ||
+                iwords.i3 == iwords.i1 ||
+                iwords.i3 == iwords.i2 ||
+                iwords.i3 == iwords.i4 ||
+                iwords.i4 == iwords.i1 ||
+                iwords.i4 == iwords.i2 ||
+                iwords.i4 == iwords.i3
+            );
+
+            do {
+                v[0].innerHTML = iwords[Object.keys(iwords)[Math.floor(Math.random() * Object.keys(iwords).length)]];
+                v[1].innerHTML = iwords[Object.keys(iwords)[Math.floor(Math.random() * Object.keys(iwords).length)]];
+                v[2].innerHTML = iwords[Object.keys(iwords)[Math.floor(Math.random() * Object.keys(iwords).length)]];
+                v[3].innerHTML = iwords[Object.keys(iwords)[Math.floor(Math.random() * Object.keys(iwords).length)]];
+            } while (
+                v[0].innerHTML == v[1].innerHTML ||
+                v[0].innerHTML == v[2].innerHTML ||
+                v[0].innerHTML == v[3].innerHTML ||
+                v[1].innerHTML == v[0].innerHTML ||
+                v[1].innerHTML == v[2].innerHTML ||
+                v[1].innerHTML == v[3].innerHTML ||
+                v[2].innerHTML == v[1].innerHTML ||
+                v[2].innerHTML == v[0].innerHTML ||
+                v[2].innerHTML == v[3].innerHTML ||
+                v[3].innerHTML == v[1].innerHTML ||
+                v[3].innerHTML == v[2].innerHTML ||
+                v[3].innerHTML == v[0].innerHTML
+            );
+
+            v[0].addEventListener("click", function () {
+                if (1) {
+                    console.log("12345");
+                }
+
+
+            });
+
+            b[0].addEventListener("click", function () {
+
+                var qdata = words[Object.keys(words)[Math.floor(Math.random() * Object.keys(words).length)]];
+                var qword = qdata.word;
+                var qtrlt = qdata.trlt;
+                i[0].innerHTML = qword;
+
+                do {
+                    iwords.i1 = qtrlt;
+                    iwords.i2 = words[Object.keys(words)[Math.floor(Math.random() * Object.keys(words).length)]]
+                        .trlt;
+                    iwords.i3 = words[Object.keys(words)[Math.floor(Math.random() * Object.keys(words).length)]]
+                        .trlt;
+                    iwords.i4 = words[Object.keys(words)[Math.floor(Math.random() * Object.keys(words).length)]]
+                        .trlt;
+                } while (
+                    iwords.i1 == iwords.i2 ||
+                    iwords.i1 == iwords.i3 ||
+                    iwords.i1 == iwords.i4 ||
+                    iwords.i2 == iwords.i1 ||
+                    iwords.i2 == iwords.i3 ||
+                    iwords.i2 == iwords.i4 ||
+                    iwords.i3 == iwords.i1 ||
+                    iwords.i3 == iwords.i2 ||
+                    iwords.i3 == iwords.i4 ||
+                    iwords.i4 == iwords.i1 ||
+                    iwords.i4 == iwords.i2 ||
+                    iwords.i4 == iwords.i3
+                );
+
+                do {
+                    v[0].innerHTML = iwords[Object.keys(iwords)[Math.floor(Math.random() * Object.keys(
+                        iwords).length)]];
+                    v[1].innerHTML = iwords[Object.keys(iwords)[Math.floor(Math.random() * Object.keys(
+                        iwords).length)]];
+                    v[2].innerHTML = iwords[Object.keys(iwords)[Math.floor(Math.random() * Object.keys(
+                        iwords).length)]];
+                    v[3].innerHTML = iwords[Object.keys(iwords)[Math.floor(Math.random() * Object.keys(
+                        iwords).length)]];
+                } while (
+                    v[0].innerHTML == v[1].innerHTML ||
+                    v[0].innerHTML == v[2].innerHTML ||
+                    v[0].innerHTML == v[3].innerHTML ||
+                    v[1].innerHTML == v[0].innerHTML ||
+                    v[1].innerHTML == v[2].innerHTML ||
+                    v[1].innerHTML == v[3].innerHTML ||
+                    v[2].innerHTML == v[1].innerHTML ||
+                    v[2].innerHTML == v[0].innerHTML ||
+                    v[2].innerHTML == v[3].innerHTML ||
+                    v[3].innerHTML == v[1].innerHTML ||
+                    v[3].innerHTML == v[2].innerHTML ||
+                    v[3].innerHTML == v[0].innerHTML
+                );
+            });
+        });
+    </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
