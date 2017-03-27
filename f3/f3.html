@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="d6.css" type="text/css">
+    <style type="text/css">
+    	body, html {
+    		width: 100%;
+    		height: 100%;
+    		margin: 0;
+    		padding: 0;
+    		font-family: calibri;
+    	}
+    	main {
+    		display: block;
+    		position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    z-index: 1;
+    	}
+    	content {
+			display: block;
+    		position: absolute;
+    		width: 100%;
+    		height: 100%;
+    		z-index: 0;
+    	}
+    	datapicker {
+    		width: 250px;
+    		display: block;
+    		position: relative;
+    	}
+    	input[name="datapicker"] {
+    		border: solid 1px #999999;
+    		border-radius: 5px;
+    		font-size: 1.2rem;
+    		padding: 5px 0 5px 0px;
+    		width: 100%;
+    		text-align: center;
+    	}
+    	input[name="datapicker"]:focus {
+    		border: solid 1px #FFBB00;
+    	}
+    	datepopup-pointer {
+    		left: 10px;
+			bottom: calc(100% - 5px);
+			width: 10px;
+			height: 10px;
+    		position: absolute;
+    		background: #fff;
+    		border-top: 1px solid #FFBB00;
+			border-right: 1px solid #FFBB00;
+			-webkit-transform: rotate(315deg);
+			transform: rotate(315deg);
+    	}
+    	datepopup-month{
+    		color: #999999;
+    		font-size: 1.2rem;
+    	}
+    	datepopup-year {
+    		color: #999999;
+    		font-size: 1.2rem;
+    	}
+    	datepopup {
+    		width : 100%;
+    		position: absolute;
+    		border: solid 1px #FFBB00;
+    		border-radius: 5px;
+    		top: 2.8rem;
+    		box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    		transition: all .5s ease;
+    		cursor: default;
+    		opacity: 0;
+    		display: flex;
+    		flex-direction: column;
+    		justify-content: center;
+    	}
+    	datepopup-header {
+    		color: #999999;
+    		display: flex;
+    		flex-direction: row;
+    		justify-content: center;
+    		font-size: 1.2rem;
+    		padding: 3px;
+    		border-bottom: solid 1px #D6D6D6;
+    	}
+    	datepopup-week {
+			display: flex;
+    		flex-direction: row;
+    		justify-content: space-between;
+    		padding: 3px 3px 3px 5px;
+    		text-transform: uppercase;
+    	}
+    	.weekend {
+    		color: #FF7A85;
+    	}
+    	datepopup-day {
+			padding: 3px 5px 3px 0px;
+			display: flex;
+    		flex-direction: row;
+    		-webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            width: 34px;
+			justify-content: space-around;
+    	}
+    	datepopup-days {
+			padding: 3px 3px 3px 3px;
+			display: flex;
+    		flex-direction: row;
+    		-webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+    	}
+    	day {
+    		display: flex;
+    		flex-wrap: wrap;
+    		justify-content: space-around;
+    		width: 34px;
+    		padding: 5px 0px 5px 0px;
+    		cursor: pointer;
+    		border-radius: 3px;
+    	}
+    	day-z {
+    		display: flex;
+    		flex-wrap: wrap;
+    		justify-content: space-around;
+    		width: 34px;
+    		padding: 5px 0px 5px 0px;
+    	}
+    	day:hover {
+    		box-shadow: 0 0px 3px rgba(181,181,181,1.0);
+    		background-color: #FEE3C1;
+    	}
+    	day:nth-child(7n+1) {
+    		color: #FF7079;
+    	}
+    	day:nth-child(7n+0) {
+    		color: #FF7079;
+    	}
+    	.current-day {
+    		background-color: #D6D6D6;
+    	}
+    </style>
+</head>
+<body>
+
+<!--
+дом объективная модель документа
+нода - узел
+элемент
+типы узлов, 12шт всего
+документы, элементы, текст, комментарии
+document.body.firstElementChild - для работы с элементами
+айдишки видны из глобального элемента window
+matches - поиск цсс селекторов и вывод true/false
+// [].forEache.call(document.body.children, function(elem, index) {
+	// console.log(elem);
+	// });
+	// var childrens = Array.prototype.slice.call(document.body.children);
+ -->
+ <main>
+ 	<datapicker>
+		<input class="inputdate" type="text" name="datapicker">
+		<datepopup>
+			<datepopup-pointer></datepopup-pointer>
+			<datepopup-header>
+				<datepopup-month></datepopup-month>
+				,&nbsp
+				<datepopup-year></datepopup-year>
+			</datepopup-header>
+			<datepopup-week>
+				<datepopup-day class="weekend">Su</datepopup-day>
+				<datepopup-day>Mo</datepopup-day>
+				<datepopup-day>Tu</datepopup-day>
+				<datepopup-day>We</datepopup-day>
+				<datepopup-day>Th</datepopup-day>
+				<datepopup-day>Fr</datepopup-day>
+				<datepopup-day class="weekend">Sa</datepopup-day>
+			</datepopup-week>
+			<datepopup-days>
+
+			</datepopup-days>
+		</datepopup>
+	</datapicker>
+ </main>
+ <content></content>
+
+
+
+<script>
+
+	document.addEventListener('DOMContentLoaded', function () {
+		var datepopup = document.querySelector("datepopup");
+		var inputdate = document.querySelector(".inputdate");
+		var datapicker = document.querySelector("datapicker");
+		var outOfDataPicker = document.querySelector("content");
+		var datepopupDays = document.querySelector("datepopup-days");
+
+		var monthArr = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+		var currDate = new Date();
+		var currMonth = monthArr[currDate.getMonth()];
+		var numberMonth = currDate.getMonth();
+		var numberDay = currDate.getDate();
+		var datepopupMonth = document.querySelector("datepopup-month");
+		datepopupMonth.innerHTML = currMonth;
+
+		var currYear = currDate.getFullYear();
+		var datepopupYear = document.querySelector("datepopup-year");
+		datepopupYear.innerHTML = currYear;
+
+		var lastDay = new Date(currDate.getFullYear(), currDate.getMonth() + 1, 0);
+		var firstDay = new Date(currDate.getFullYear(), currDate.getMonth(), 1);
+		monsDays = lastDay.getDate();
+
+		if (RegExp("Mon").test(firstDay) == true) {
+			var dayz = 1;
+			do {
+				var newDayz = document.createElement("day-z");
+				datepopupDays.appendChild(newDayz);
+				datepopupDays.children[dayz-1].innerHTML = "&nbsp";
+				dayz++;
+			} while (dayz <= 1);
+		} else if(RegExp("Tue").test(firstDay) == true) {
+			var dayz = 1;
+			do {
+				var newDayz = document.createElement("day-z");
+				datepopupDays.appendChild(newDayz);
+				datepopupDays.children[dayz-1].innerHTML = "&nbsp";
+				dayz++;
+			} while (dayz <= 2);
+		} else if(RegExp("Wed").test(firstDay) == true) {
+			var dayz = 1;
+			do {
+				var newDayz = document.createElement("day-z");
+				datepopupDays.appendChild(newDayz);
+				datepopupDays.children[dayz-1].innerHTML = "&nbsp";
+				dayz++;
+			} while (dayz <= 3);
+		} else if(RegExp("Thu").test(firstDay) == true) {
+			var dayz = 1;
+			do {
+				var newDayz = document.createElement("day-z");
+				datepopupDays.appendChild(newDayz);
+				datepopupDays.children[dayz-1].innerHTML = "&nbsp";
+				dayz++;
+			} while (dayz <= 4);
+		} else if(RegExp("Fri").test(firstDay) == true) {
+			var dayz = 1;
+			do {
+				var newDayz = document.createElement("day-z");
+				datepopupDays.appendChild(newDayz);
+				datepopupDays.children[dayz-1].innerHTML = "&nbsp";
+				dayz++;
+			} while (dayz <= 5);
+		} else if(RegExp("Sat").test(firstDay) == true) {
+			var dayz = 1;
+			do {
+				var newDayz = document.createElement("day-z");
+				datepopupDays.appendChild(newDayz);
+				datepopupDays.children[dayz-1].innerHTML = "&nbsp";
+				dayz++;
+			} while (dayz <= 6);
+		}
+		// else if(RegExp("Sun").test(firstDay) == true) {
+		// 	var dayz = 1;
+		// 	do {
+		// 		var newDayz = document.createElement("day-z");
+		// 		datepopupDays.appendChild(newDayz);
+		// 		datepopupDays.children[dayz-1].innerHTML = "&nbsp";
+		// 		dayz++;
+		// 	} while (dayz <= 7);
+		// }
+
+		var c = 1;
+		do {
+			var newDay = document.createElement("day");
+			datepopupDays.appendChild(newDay);
+			//newDay.setAttribute("onclick", "getData(event)");
+			datepopupDays.children[dayz-1].innerHTML = c++;
+			dayz++;
+			if (numberDay == (c - 1)) {
+				newDay.className += " current-day";
+			}
+		} while (c <= monsDays);
+
+		inputdate.value = numberDay + " " + currMonth + " " + currYear;
+
+		function getData(event) {
+
+		};
+		var newDayAll = document.querySelectorAll("day");
+			newDayAll[event.innerHTML].addEventListener("click", function () {
+			console.log(this);
+			inputdate.value = this.innerHTML + " " + currMonth + " " + currYear;
+		});
+
+
+
+
+		outOfDataPicker.addEventListener("click", function () {
+			datepopup.style.opacity = "0";
+			setTimeout(function() {
+		    	datepopup.style.display = "none";
+		    }, 200);
+		});
+		inputdate.addEventListener("click", function () {
+			datepopup.style.opacity = "1";
+		    datepopup.style.display = "block";
+		});
+	});
+</script>
+
+</body>
+</html>

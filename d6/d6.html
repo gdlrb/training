@@ -8,7 +8,7 @@
 <body>
 
 <div class="content content--gradient">
-    <form class="form form__content form__content--centered-frame">
+    <form class="form form__content form__content--centered-frame" method="POST">
 
         <h2>Form Action <code class="code__form--info">_mc4wp_action</code></h2>
 
@@ -21,8 +21,8 @@
 
         <h4 class="label__form--input">Choice Type</h4>
         <select class="select__form--arrows">
-            <option value="1">Radio Buttons</option>
-            <option value="2">Other ...</option>
+            <option value="Radio Buttons">Radio Buttons</option>
+            <option value="Other ..." checked>Other ...</option>
         </select>
 
         <h4 class="label__form--input">Choices</h4>
@@ -49,7 +49,95 @@
         <input class="button__form--accept" type="submit" value="Add to form">
 
     </form>
+    <cookies>123</cookies>
 </div>
 
+
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        var cookies = document.querySelector("cookies");
+        var ok_button = document.querySelector(".button__form--accept");
+        var event_name = document.querySelector(".input__form--line");
+        var select_form = document.querySelector(".select__form--arrows");
+        var choice1 = document.querySelector("#cb1");
+        var choice2 = document.querySelector("#cb2");
+        var form_checkbox = document.querySelector(".input__form--checkbox");
+
+        var text = "Setting Cookies : " + document.cookie;
+        cookies.innerHTML = text;
+
+        ok_button.addEventListener("click", function () {
+            document.cookie =
+            "<br />" + "Field Label - " + event_name.value + "." +
+            "<br />" + "Choice Type - " + select_form.value + "." +
+            "<br />" + "Subscribe - " + choice1.checked + "." +
+            "<br />" + "Unsubscribe - " + choice2.checked + "." +
+            "<br />" + "Wrap in paragraph tags? - " + form_checkbox.checked + ".";
+        });
+        if (performance.navigation.type === 1) {
+            document.cookie = "";
+        };
+        var a = document.cookie;
+        cookies.innerHTML += a;
+    });
+
+
+
+
+    /*
+    (function() {
+
+    this.save = function save() {
+        var action = document.querySelector(".input__text--all-width").value;
+        var optionValue = document.querySelector(".input__number").value;
+        var radioSubscribe = document.querySelector(".input__radio[value='subscribe']").checked;
+        var checkWrap = document.querySelector(".input__checkbox").checked;
+
+        var data = [];
+        data.push({
+            key: "action",
+            value: action
+        });
+        data.push({
+            key: "optionValue",
+            value: optionValue
+        });
+        data.push({
+            key: "radioSubscribe",
+            value: radioSubscribe
+        });
+        data.push({
+            key: "checkWrap",
+            value: checkWrap
+        });
+
+        for (var i = 0; i < data.length; i++) {
+            localStorage.setItem(data[i].key, data[i].value);
+        }
+    }
+
+    window.onload = function(e) {
+        console.log(performance.navigation.type);
+
+        if (performance.navigation.type === 1) {
+            localStorage.clear();
+        } else {
+            document.querySelector(".input__text--all-width").value = localStorage.getItem("action");
+
+            document.querySelector(".input__number").value = localStorage.getItem("optionValue");
+
+            document.querySelector(".input__radio[value='subscribe']").checked = (localStorage.getItem("radioSubscribe") == 'true' ? "checked" : "");
+
+            document.querySelector(".input__radio[value='unsubscribe']").checked = (localStorage.getItem("radioSubscribe") == 'false' ? "checked" : "");
+
+            (localStorage.getItem("checkWrap") == 'false' ? document.querySelector(".input__checkbox")
+                .removeAttribute("checked") : "");
+
+            }
+        }
+    })();
+     */
+</script>
 </body>
 </html>

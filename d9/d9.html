@@ -48,8 +48,107 @@
     };
 
     qqq();
+
+            // scope
+    var d = function(){  // LexicalEnvironment
+        var zxcv = 15;
+        console.log(zxcv);
+        // a = 1;
+        // if (false) {       всплытие. замыкание
+        //     var a;
+        // }
+    }();
+    console.log(zxcv)
+
+    // var a = 2;
+    // function f1() {      //вызовется а = 2, из глоб. скоупа
+    //     var a = 1;
+    //     var f2 = new Function('alert(a)');
+    //     f2();
+    // }
+    // f1();
+
+    (function () {
+        var a = 1;     //pattern endependesing
+    })();
+
+    // this - контекст выполнения
+    //'use strict'; //не заработает
+    var user = {
+        gertName: function () {
+            alertt(this['full name']);
+        },
+        name: 'user name'
+    };
+    user.gertName();
+
+    // var test = user.gertName;  //вырывает из контекста
+    // test();
+
+    function f1() {
+        //var this = {};
+        this.name = 1;
+        //return this;
+    }
+    var obj = new f1(); //не копирует объект
+    alertt(obj.name);
+
+
 //    read aply, bind, call    currency model and even loop  концепция жизненного цикла стека
 
+    var user = {
+        name: 'test',
+        getName: function () {
+            alertt(this.name);
+        }
+    }
+    user.getName();
+    user.getName().call({
+        name: 'test2';
+    })
+
+    user.getName().bind({
+        name: 'test2';
+    })
+    user.getName();
+
+    alert([].join.call('1,2,3', ','));
+
+    // arguments - у всех функций псевдо элемент
+
+    //функциональное наследование //хостинг - это тоже всплытие
+    //не самое красивое написание наследования
+    
+    function Animal(name, sex, size) {
+        this.name = name;
+
+        this.say = function (){
+            //say;
+        }
+    }
+    function Terminator () {}
+    function Dog(name, sex, size) {
+        Animal.call(this, name, sex, size); //animal.apply(this, arguments)
+        Terminator.call(this);
+        var parentSay = this.say.bind(this);
+        this.say = function () {
+            parentSay();
+            //console.log('gav');
+        }
+    }
+    function Cat(name) {
+        Animal.call(this.name);
+    }
+//prototype extends
+//instanceof - проверка наследования объекта
+    function dog (){
+
+    }
+    dog.prototype = Object.create(Animal.prototype);
+    dog.prototype.constructor = Dog;
+    dog.prototype.say = function () { //новая обл видимости//новый объект
+        Animal.prototype.say;
+    }
 
     function thithh() {
 

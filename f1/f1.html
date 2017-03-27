@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<script type="text/javascript">
+
+function makeBuffer() {
+	var buffText = "";
+	return function (val='') {
+		buffText += val;
+		return buffText;
+	};
+};
+
+var buffer = makeBuffer();
+buffer('Замыкания');
+buffer(' Использовать');
+buffer(' Нужно');
+document.write(buffer() + "<br />");
+
+buffer = makeBuffer();
+buffer('0');
+buffer('1');
+buffer('0');
+document.write(buffer() + "<br />");
+
+// return function (val) {
+// 		//buffArr.push(val);
+
+// 		// for (var i = 0; i < buffArr.length; i++) {
+// 		//   	buffText += buffArr[i];
+// 		// };
+// 		buffText += val;
+// 		return buffText;
+// };
+
+function Mashine() {
+	var _this = this;
+	this._enable = false;
+
+	this.enable = function() {
+		_this._enable = true;
+	}
+	this.disable = function() {
+		_this._enable = false;
+	}
+}
+
+function Fridge(power) {
+	Mashine.apply(this);
+	this.power = power;
+	var food = [];
+
+	this.addFood = function() {
+		if(this._enable){
+			if(food.length + arguments.length <= power/100) {
+				for(var i = 0; i < arguments.length; i++) {
+					food.push(arguments[i]);
+				}
+			}
+			else {
+				document.write("слишком много еды" + "<br />");
+			}
+		}
+		else {
+			return document.write("холодильник выключен" + "<br />");
+		}
+	}
+	this.getFood = function() {
+		return food.slice();
+	}
+}
+
+var fridge = new Fridge(200);
+fridge.addFood("котлета"); // ошибка, холодильник выключен
+
+// создать холодильник мощностью 500 (не более 5 еды)
+var fridge = new Fridge(500);
+fridge.enable();
+fridge.addFood("котлета");
+fridge.addFood("сок", "зелень");
+fridge.addFood("варенье", "пирог","торт"); // ошибка, слишком много еды
+
+var fridge = new Fridge(500);
+fridge.enable();
+fridge.addFood("котлета");
+fridge.addFood("сок", "варенье");
+var fridgeFood = fridge.getFood();
+document.write(fridgeFood + "<br />"); // котлета, сок, варенье
+
+// добавление элементов не влияет на еду в холодильнике
+fridgeFood.push("вилка", "ложка");
+
+document.write(fridge.getFood() + "<br />"); // внутри по-прежнему: котлета, сок, варенье
+
+Fridge.prototype = Object.create(Mashine.prototype);
+Fridge.prototype.constructor = Mashine;
+
+var fridge = new Fridge(200);
+fridge.addFood("котлета"); // ошибка, холодильник выключен
+
+// создать холодильник мощностью 500 (не более 5 еды)
+var fridge = new Fridge(500);
+fridge.enable();
+fridge.addFood("котлета");
+fridge.addFood("сок", "зелень");
+fridge.addFood("варенье", "пирог","торт"); // ошибка, слишком много еды
+
+var fridge = new Fridge(500);
+fridge.enable();
+fridge.addFood("котлета");
+fridge.addFood("сок", "варенье");
+var fridgeFood = fridge.getFood();
+document.write(fridgeFood + "<br />"); // котлета, сок, варенье
+
+// добавление элементов не влияет на еду в холодильнике
+fridgeFood.push("вилка", "ложка");
+
+document.write(fridge.getFood() + "<br />"); // внутри по-прежнему: котлета, сок, варенье
+</script>
+<body>
+
+</body>
+</html>
