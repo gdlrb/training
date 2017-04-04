@@ -1,2 +1,5 @@
-/.idea
-/.vscode
+.idea
+.vscode
+f4/node_modules/
+f4/npm-debug.log
+f4/dist

@@ -1,0 +1,95 @@
+body {
+    background-color: #FBF7F3;
+}
+.block_q {
+    margin: auto;
+    margin-top: 15%;
+    max-width: 700px;
+    min-height: 250px;
+    background-color: #B5B5B5;
+    border-radius: 2px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 0 4px 0 rgba(247, 242, 242, 1);
+}
+.block_gi {
+    margin: auto;
+    margin-top: 55px;
+    max-width: 600px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.block_i {
+    text-align: center;
+    font-size: 35px;
+    margin: auto;
+    margin-top: 5px;
+    width: 50%;
+    border: none;
+    border-radius: 1px;
+    background-color: white;
+    box-shadow: 0 0 4px 0 rgba(247, 242, 242, 1);
+}
+.block_v {
+    text-align: center;
+    font-size: 20px;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 0;
+    float: left;
+    border: none;
+    min-width: 200px;
+    border-radius: 1px;
+    background-color: white;
+    transition-duration: 0.4s;
+    box-shadow: 0 0 4px 0 rgba(247, 242, 242, 1);
+}
+.block_v:focus {
+    outline: 0;
+}
+.block_v:active {
+    outline: 0;
+}
+/*.block_v:hover {
+    text-align: center;
+    font-size: 20px;
+    display: inline-block;
+    margin: 5px;
+    float: left;
+    border-radius: 1px;
+    background-color: #e7a61a;
+    transition-duration: 0.4s;
+    box-shadow: 0 0 10px 0 rgba(247, 242, 242, 1);
+}*/
+.block_b {
+    text-align: center;
+    font-size: 35px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 55px;
+    width: 50%;
+    border: none;
+    transition-duration: 0.4s;
+    background-color: white;
+}
+/*.block_b:hover {
+    text-align: center;
+    font-size: 35px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 55px;
+    width: 50%;
+    background-color: #e7a61a;
+    box-shadow: 0 0 10px 0 rgba(247, 242, 242, 1);
+}*/
+@media all and (max-width: 700px) {
+    .block_q {
+        margin: 0;
+        margin-top: 0;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

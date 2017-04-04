@@ -1,0 +1,146 @@
+setAttribute("style", "background-color:yellow");body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: calibri;
+}
+main {
+	display: block;
+	position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+content {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+datepicker {
+	width: 250px;
+	display: block;
+	position: relative;
+}
+input[name="datepicker"] {
+	border: solid 1px #999999;
+	border-radius: 2px;
+	font-size: 1.2rem;
+	padding: 5px 0 5px 0px;
+	width: 100%;
+	text-align: center;
+}
+input[name="datapicker"]:focus {
+	border: solid 1px #FFBB00;
+}
+datepopup-pointer {
+	left: 10px;
+	bottom: calc(100% - 5px);
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	background: #fff;
+	border-top: 1px solid #FFBB00;
+	border-right: 1px solid #FFBB00;
+	-webkit-transform: rotate(315deg);
+	transform: rotate(315deg);
+}
+datepopup-month {
+	color: #424242;
+	font-size: 1.2rem;
+}
+prev-month {
+	color: #999999;
+	font-size: 1.1rem;
+	width: 35px;
+}
+next-month {
+	color: #999999;
+	font-size: 1.1rem;
+	width: 35px;
+}
+datepopup-year {
+	color: #424242;
+	font-size: 1.2rem;
+}
+datepopup {
+	width : 100%;
+	position: absolute;
+	border: solid 1px #FFBB00;
+	border-radius: 5px;
+	top: 2.8rem;
+	box-shadow: 0 4px 12px rgba(0,0,0,.15);
+	transition: all .5s ease;
+	cursor: default;
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+datepopup-header {
+	color: #999999;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 1.2rem;
+	padding: 3px;
+	border-bottom: solid 1px #D6D6D6;
+}
+datepopup-week {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 3px 3px 3px 5px;
+	text-transform: uppercase;
+}
+.weekend {
+	color: #FF7A85;
+}
+datepopup-day {
+	padding: 3px 5px 3px 0px;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 34px;
+	justify-content: space-around;
+}
+datepopup-days {
+	padding: 3px 3px 3px 3px;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+day {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 34px;
+	padding: 5px 0px 5px 0px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+day-z {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 34px;
+	padding: 5px 0px 5px 0px;
+}
+day:hover {
+	box-shadow: 0 0px 3px rgba(181,181,181,1.0);
+	background-color: #FEE3C1;
+}
+day:nth-child(7n+1) {
+	color: #FF7079;
+}
+day:nth-child(7n+0) {
+	color: #FF7079;
+}
+.current-day {
+	background-color: #D6D6D6;
+}

@@ -1,0 +1,101 @@
+ajax
+ XMLHttpRequest
+ life server
+ var new xhr = XMLHttpRequest();
+ xhr.open('GET', 'phones.json', false); асинхронный/синхронный запрос
+ xhr.send(); отправляет запрос xhr
+ xhr.status; статус запроса '200' '404'
+ expressjs для сервера node
+ xhr.onreadystatechange = function() {
+ if (xhr.readyState != 4) {
+ return kkkk;
+ }
+ }
+ обычно нужен 4й статус 'done'
+ xhr.onerror
+ лучше обрабатывать через отлова статуса state
+ http - заголовки
+ xhr.getAllResponceHeaders();
+ CORS для простых запросов
+ список событий
+ loadstart
+ progress
+ abort
+ ajax через promise - домашка
+
+
+
+typescript
+ js был разработан за 14 дней лидом c#
+ var foo = 123;
+ foo = '456'; ts не скомпилит, выдаст ошибку
+ npm install typescript -g
+ tsc app.js
+ webpack.config.json
+ yeoman - repository generator
+ let points: string[];
+ points = ['string'];
+ let points: [string, number];
+ points = ['string', 1, 'string', 2];
+ enum Color {
+ Red,
+ Blue,
+ Green
+ }
+ let color: Color = Color.Red;
+
+ if(color === Color.Red) {
+
+ }
+
+ any - bad, нужно типизировать
+ тип void - пустота
+ function f1(): number {
+
+ }
+
+ function f1(): void {
+   return undefine; //возвращает void
+ }
+
+ type never не возвращает ничего
+
+ function f2(): never {
+ while(true){
+
+ }
+ }
+
+ let a: any = '123';
+ let b: number = (a as string).length;
+
+ деструктизация
+
+ интефейсы
+ абстрация действия
+
+ interface ICard {
+ //именуется обычно через I
+ }
+
+ intarface Animal {
+ name: 'string';
+ say: () => void;
+ }
+
+ let ani1: IAnimal = {
+ name: 'dog';
+ say: () => {
+ console.log();
+ }
+ }
+
+ let f1 = () => {
+ console.log(1);
+ }
+
+ readonly name; - только для чтения - отличие от константы - та же константа только ридонли используется только в интерфейсах
+
+ 
+git rm -r --cached .\f4\node_modules\
+  1

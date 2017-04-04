@@ -260,24 +260,24 @@
                     v[3].innerHTML == v[0].innerHTML
                 );
             });
-            v[0].addEventListener("click", function () {
-                if (1) {
-                    console.log("12345");
+            v[0].addEventListener("click", function (qdata) {
+                if (event.target.innerHTML === qdata.trlt) {
+                    console.log(event.target.innerHTML);
                 }
             });
             v[1].addEventListener("click", function () {
-                if (1) {
-                    console.log("12345");
+                if (event.target.innerHTML === qdata.trlt) {
+                    console.log(event.target.innerHTML);
                 }
             });
             v[2].addEventListener("click", function () {
-                if (1) {
-                    console.log("12345");
+                if (event.target.innerHTML === qdata.trlt) {
+                    console.log(event.target.innerHTML);
                 }
             });
             v[3].addEventListener("click", function () {
-                if (1) {
-                    console.log("12345");
+                if (event.target.innerHTML === qdata.trlt) {
+                    console.log(event.target.innerHTML);
                 }
             });
         });
