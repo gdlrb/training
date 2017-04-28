@@ -206,5 +206,57 @@ var words = {
     w52: {
         word: "balance",
         trlt: "равновесие"
-    }
+    },
+    w53: {
+        word: "bamboo",
+        trlt: "бамбук"
+    },
+    w54: {
+        word: "band",
+        trlt: "группа"
+    },
+    w55: {
+        word: "bandage",
+        trlt: "повязка"
+    },
+    w56: {
+        word: "barbarian",
+        trlt: "варвар"
+    },
+    w57: {
+        word: "barge",
+        trlt: "баржа"
+    },
+    w58: {
+        word: "barrack",
+        trlt: "лачуга"
+    },
+    w59: {
+        word: "billion",
+        trlt: "миллиард"
+    },
+    w60: {
+        word: "boat",
+        trlt: "лодка"
+    },
+    w61: {
+        word: "collision",
+        trlt: "столкновение"
+    },
+    w62: {
+        word: "contribution",
+        trlt: "контрибуция"
+    },
+    w63: {
+        word: "convention",
+        trlt: "договор"
+    },
+    w64: {
+        word: "decade",
+        trlt: "десятилетие"
+    },
+    w65: {
+        word: "degeneration",
+        trlt: "вырождение"
+    },
 };
