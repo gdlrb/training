@@ -1,4 +1,4 @@
-# npm init
+# npm init -y
 # npm install lite-server --save-dev
 # Inside package.json...
   "scripts": {
@@ -9,6 +9,11 @@
   "browser": "chrome"
 }
 # npm run dev
+
+# npm install --save-dev webpack
+# node_modules/.bin/webpack
+
+
 
 ## https://github.com/babel/babel-loader
 # npm install --save-dev babel-cli babel-preset-env

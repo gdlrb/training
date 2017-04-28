@@ -1,24 +1,17 @@
 {
   "name": "f4",
   "version": "1.0.0",
-  "description": "",
+  "description": "\"scripts\": {\r     \"dev\": \"lite-server --c bs-chrome.json\"\r   },\r # bs-chrome.json\r {\r   \"browser\": \"chrome\"\r }\r # npm run dev",
   "main": "index.js",
-  "dependencies": {
-    "lodash": "^4.17.4"
-  },
-  "devDependencies": {
-    "babel": "^6.23.0",
-    "babel-cli": "^6.24.0",
-    "babel-core": "^6.24.0",
-    "babel-loader": "^6.4.1",
-    "babel-preset-env": "^1.3.2",
-    "lite-server": "^2.3.0",
-    "webpack": "^2.3.2"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "lite-server --c bs-chrome.json"
   },
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0",
+    "webpack": "^2.3.3"
+  }
 }
