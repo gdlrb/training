@@ -21,7 +21,7 @@ button.active {
     background-color: #1f1c40;
     color: white;
 }
-.page {
+page {
     display: flex;
     flex-direction: row;
     justify-content: center;
